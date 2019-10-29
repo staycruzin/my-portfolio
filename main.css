@@ -4,9 +4,22 @@
     margin: 0;
 }
 
-#main-header {
+header {
     display: flex;
+    position: relative;
     box-shadow: 0 8px 6px -6px black;
+}
+
+header input {
+    display: none;
+}
+
+header label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 63px;
 }
 
 #header-text {
@@ -19,21 +32,9 @@
     margin-bottom: 5px;
 }
 
-h1, h3 {
+h1, h2 {
     margin: 0;
     padding: 0;
-}
-
-#main-header input {
-    display: none;
-}
-
-#main-header label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    width: 63px;
 }
 
 .menu_button {
@@ -41,19 +42,66 @@ h1, h3 {
 }
 
 #nav {
-    max-height: 0;
-    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: black;
+}
+
+#nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#nav a:hover {
+    background-color: gray;
+    color: black;
 }
 
 #menu-trigger:checked + label > .open-button {
     display: none;
 }
 
-#menu-trigger:checked + #main-header ~ #nav {
-    max-height: 100%;
+#menu-trigger:checked ~ #nav {
+    height: auto;
+    transition: transform 0.3s ease-out; 
+    transform-origin: top;
+    transform:scaleY(1);
 }
 
 #menu-trigger:not(:checked) + label > .close-button {
     display: none;
 }
 
+#menu-trigger:not(:checked) ~ #nav {
+    max-height: 0;
+    overflow: hidden;
+    transform:scaleY(0);
+}
+
+section {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray
+}
+
+section:nth-child(even) {
+    background-color: lightgrey;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+footer p {
+    width: auto;
+    font-size: 20px;
+}
