@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -13,6 +14,7 @@ header {
     z-index: 10;
     width: 200px;
     height: 100%;
+    background-color: #f7f7f7;
 }
 
 header input {
@@ -33,15 +35,26 @@ header label {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+    color: #2D576F;
 }
 
-#header-text h2 {
-    color: gray;
+#main-heading {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+#sub-heading {
+    color: #76C1D4;
+    font-size: 20px;
+}
+
+h1, h2 {
+    font-family: 'Prata', serif;
+    padding: 0;
 }
 
 h1 {
     margin: 0px 10px 10px 10px;
-    padding: 0;
 }
 
 .menu-button {
@@ -50,26 +63,32 @@ h1 {
 
 h2 {
     margin: 0;
-    padding: 0;
+}
+
+h2 span {
+    font-family: 'Prata', serif;    
 }
 
 #nav {
     height: 100%;
-    background: black;
+    background:#f7f7f7;
+    text-align: center;
+    border-top: 2px solid #76C1D4;
 }
 
 #nav a {
     display: block;
     text-decoration: none;
-    color: white;
+    color:#2D576F;
     cursor: pointer;
     font-size: 20px;
     padding: 15px;
+    border-bottom: 2px solid #76C1D4;
 }
 
 #nav a:hover {
-    background-color: gray;
-    color: black;
+    background-color: #2D576F;
+    color: #f7f7f7;
 }
 
 main, footer {
@@ -81,11 +100,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: #76C1D4;
+    color: #3D7C47;
 }
 
 section:nth-child(even) {
-    background-color: lightgrey;
+    background-color: #2D576F;
+    color: #f7f7f7;
 }
 
 footer {
@@ -93,6 +114,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #2D576F;
+    color: #f7f7f7;
 }
 
 footer p {
@@ -165,7 +188,57 @@ footer p {
 }
 
 @media screen and (min-width: 601px) {
+    #header-text { 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    h1, h2 {
+        text-align: left;
+    }
+
+    header {
+        width: 250px;
+    }
+
+    #driven {
+        color: #2D576F;
+    }
+
+    #difference {
+        text-decoration: underline;
+        text-decoration-color: #2D576F;
+    }
+
     #hero {
         height: 100vh;
+        background-image: url('hero-image.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    #hero h2 {
+        /* Prata is My Favorite Header Font So Far */
+        font-family: 'Prata', serif;
+        font-weight: 700;
+        position: relative;
+        top: 30px;
+        font-size: 45px;
+        line-height: 60px;
+        color:#3D7C47;
     }
 }
+
+/* 
+Potential Color Scheme:
+Green Mountain: #3D7C47
+
+Blue Mountain: #2D576F
+
+Light Blue Backdrop: #76C1D4
+
+Barely Gray Edge: #F7F7F7
+*/

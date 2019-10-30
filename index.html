@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen|Titillium+Web&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Prata&display=swap" rel="stylesheet">
 <body>
      <!-- Next Steps: Figure out how to make Nav dissapear once a button is clicked AND when you click anywhere else (probably need JavaScript for this)
           Also want to figure out how to transition out when closing it. -->
      <!-- Also figure out how to prevent #skills or w/e from appearing in the URI when clicked. (JavaScript event.preventDefault?)-->
-     <!-- Add a down array on the bottom of the hero image -->
+     <!-- Add a down arrow on the bottom of the hero image -->
+     <!-- Fix issue between like 600 - 800 px where it doesn't shrink uniformly -->
      <header role="header">
           <input id="menu-trigger" type="checkbox"/>
           <label for="menu-trigger">
@@ -29,13 +29,13 @@
                <a href="#about">About</a>
                <a href="#skills">Skills</a>
                <a href="#projects">Projects</a>
-               <a href="#contact">Contact</a>      
+               <a href="#contact" class="bottom-nav-border">Contact</a>      
           </nav>
      </header>
 
      <main role="main">
           <section id="hero">
-               <h2>Driven by a Desire to Make a Difference.</h2>
+               <h2><span id="driven">Driven</span> by the Desire<br>to <span id="difference">Make a Difference</span>.</h2>
           </section>
 
           <section id="about">
