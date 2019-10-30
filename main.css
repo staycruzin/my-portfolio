@@ -6,8 +6,13 @@
 
 header {
     display: flex;
-    position: relative;
-    box-shadow: 0 8px 6px -6px black;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 200px;
+    height: 100%;
 }
 
 header input {
@@ -15,36 +20,41 @@ header input {
 }
 
 header label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    width: 63px;
+    display: none;
 }
 
 #header-text {
     width: 100%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-h1, h2 {
+#header-text h2 {
+    color: gray;
+}
+
+h1 {
+    margin: 0px 10px 10px 10px;
+    padding: 0;
+}
+
+.menu-button {
+    display: none;
+}
+
+h2 {
     margin: 0;
     padding: 0;
 }
 
-.menu_button {
-    font-size: 35px;
-}
-
 #nav {
-    position: absolute;
-    top: 100%;
-    width: 100%;
+    height: 100%;
     background: black;
 }
 
@@ -62,25 +72,8 @@ h1, h2 {
     color: black;
 }
 
-#menu-trigger:checked + label > .open-button {
-    display: none;
-}
-
-#menu-trigger:checked ~ #nav {
-    height: auto;
-    transition: transform 0.3s ease-out; 
-    transform-origin: top;
-    transform:scaleY(1);
-}
-
-#menu-trigger:not(:checked) + label > .close-button {
-    display: none;
-}
-
-#menu-trigger:not(:checked) ~ #nav {
-    max-height: 0;
-    overflow: hidden;
-    transform:scaleY(0);
+main, footer {
+    margin-left: 200px;
 }
 
 section {
@@ -88,7 +81,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray
+    background-color: gray;
 }
 
 section:nth-child(even) {
@@ -99,9 +92,80 @@ footer {
     height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+}
 
 footer p {
     width: auto;
     font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        box-shadow: 0 8px 6px -6px black;
+    }
+
+    header label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        width: 63px;
+    }
+
+    #header-text {
+        height: auto;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-button {
+        display: inline;
+        font-size: 35px;
+    }
+
+    #nav {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+
+    #menu-trigger:checked + label > .open-button {
+        display: none;
+    }
+    
+    #menu-trigger:checked ~ #nav {
+        height: auto;
+        transition: transform 0.3s ease-out; 
+        transform-origin: top;
+        transform:scaleY(1);
+    }
+    
+    #menu-trigger:not(:checked) + label > .close-button {
+        display: none;
+    }
+    
+    #menu-trigger:not(:checked) ~ #nav {
+        max-height: 0;
+        overflow: hidden;
+        transform:scaleY(0);
+    }
+
+    main, footer {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #hero {
+        height: 100vh;
+    }
 }
