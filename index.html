@@ -12,6 +12,8 @@
           Also want to figure out how to transition out when closing it. -->
      <!-- Also figure out how to prevent #skills or w/e from appearing in the URI when clicked. (JavaScript event.preventDefault?)-->
      <!-- Fix issue between like 600 - 800 px where it doesn't shrink uniformly -->
+     <!-- Condense middle paragraph of about me text-->
+     <!-- Figure out how to make it so that hero image in mobile is 100vh - Header (Alternatively: Move the h2 text down to compensate) -->
      <header role="header">
           <input id="menu-trigger" type="checkbox"/>
           <label for="menu-trigger">
@@ -42,16 +44,16 @@
 
      <main role="main">
           <section id="hero">
-               <h2><span id="driven">Driven</span> by a Desire<br>to <span id="difference">Make a Difference</span>.</h2>
+               <h2><span id="driven-emphasis">Driven</span> by a Desire<br>to <span id="difference-emphasis">Make a Difference</span>.</h2>
                <a id="down-arrow" href="#about" ><img src="assets/down-arrow.png" /></a>
           </section>
 
-          <section id="about">
+          <section class="content-sections" id="about">
                <h2>About</h2>
                <div class="about-flex-container">
                     <div id="about-text">
-                         <p>I am a full-stack software developer based in San Diego, California who focuses on writing clean, elegant, and efficient code. 
-                              I love to code things from scratch and to watch my ideas come to life in the browser.
+                         <p>I am a full-stack software developer based in San Diego, California who focuses on writing <span class="text-emphasis">clean</span>, <span class="text-emphasis">elegant</span>, and 
+                              <span class="text-emphasis">efficient</span> code. I love to code things from scratch and watch my ideas come to life in the browser.
                          </p>
                          <br>
                          <p>When I'm not coding, you'll probably find me somewhere enjoying the great outdoors. I've learned many valuable life lessons in the mountains, 
@@ -62,7 +64,7 @@
                          </p>
                          <br>
                          <p>I am passionate about building software that is making a difference in the world and I'm looking to make a big impact at a high growth company
-                              where I can work on interesting projects with positive people. Let's make something special.
+                              where I can work on interesting projects with positive people. <a id="emphasis-and-link" href="#contact">Let's make something special</a>.
                          </p>
                     </div>
 
@@ -70,11 +72,11 @@
                </div>
           </section>
 
-          <section id="skills">
+          <section class="content-sections" id="skills">
                <h2>Skills</h2>
 
                <div id="skills-container">
-                    <h3>Frontend</h3>
+                    <h3>Front-End</h3>
                     <div class="skills-flex-container">
                          <figure class="skill-logo">
                               <img src="assets/html5.png" alt="HTML5 Logo" />
@@ -94,7 +96,7 @@
                          </figure>
                     </div>
 
-                    <h3>Backend</h3>
+                    <h3>Back-End</h3>
                     <div class="skills-flex-container">
                          <figure class="skill-logo">
                               <img src="assets/java.png" alt="Java Logo" />
@@ -123,14 +125,14 @@
                </div>
           </section>
 
-          <section id="projects">
+          <section class="content-sections" id="projects">
                <h2>Projects</h2>
           </section>
 
-          <section id="contact">
+          <section class="content-sections" id="contact">
                <h2>Contact</h2>
           </section> 
      </main>
-     <footer role="content-info"><p>Footer</p></footer>
+     <footer role="content-info">Footer</footer>
 </body>
 </html>

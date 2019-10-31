@@ -10,30 +10,24 @@ html, body {
 
 header {
     display: flex;
-    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-    width: 200px;
     height: 100%;
     background-color: #2D3A66;
 }
 
 #header-text {
     width: 100%;
-    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #DFBD98;
 }
 
 #main-heading {
+    color: #DFBD98;
     font-size: 30px;
     margin-bottom: 5px;
 }
@@ -43,33 +37,20 @@ header {
     font-size: 20px;
 }
 
-h1, h2 {
+h1, h2, h2 span {
     font-family: 'Merriweather', serif;
     padding: 0;
-}
-
-h1 {
-    margin: 0px 10px 10px 10px;
-}
-
-h2 {
     margin: 0;
-}
-
-h2 span {
-    font-family: 'Merriweather', serif;   
 }
 
 #nav {
     height: 100%;
     background:#2D3A66;
-    text-align: center;
 }
 
 #nav a {
     display: block;
     text-decoration: none;
-    text-align: center;
     color:#B59874;
     cursor: pointer;
     font-size: 20px;
@@ -80,21 +61,21 @@ h2 span {
     color: #D2E6F3;
 }
 
-section {
+.content-sections {
     height: auto;
     padding: 15px;
     background-color:#4E70A0;
     color: #FFFFFF;
 }
 
-section h2 {
-    text-align: center;
-    font-size: 40px;
+.content-sections:nth-child(even) {
+    background-color: #5B4D58;
+    color: #D2E6F3;
 }
 
-section:nth-child(even) {
-    background-color: #5B4D58;
-    color: #FFFFFF;
+.content-sections h2 {
+    text-align: center;
+    font-size: 45px;
 }
 
 #hero {
@@ -111,25 +92,21 @@ section:nth-child(even) {
 }
 
 #hero h2 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
     position: relative;
     top: 50px;
     font-size: 45px;
     line-height: 60px;
     text-align: center;
     color:#2D3A66;
-    clear: right;
 }
 
-#driven {
-    color: #2D3A66;
+#driven-emphasis {
     background-color: #DFBD98;
     padding-left: 3px;
     padding-right: 3px;
 }
 
-#difference {
+#difference-emphasis {
     text-decoration: underline;
     text-decoration-color: #DFBD98;
 }
@@ -140,14 +117,20 @@ section:nth-child(even) {
 }
 
 #about p {
-    text-align: left;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
-#about img {
-    margin-top: 15px;
-    margin-left: 15px;
+.text-emphasis {
+    color: #DFBD98;
+}
+
+#emphasis-and-link {
+    color: #DFBD98;
+}
+
+#emphasis-and-link:hover {
+    color:#2D3A66;
 }
 
 #skills h3 {
@@ -175,13 +158,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     background-color: #2D3A66;
     color: #B59874;
-}
-
-footer p {
-    width: auto;
-    font-size: 20px;
 }
 
 header input,
@@ -195,9 +174,7 @@ header label,
     header {
         width: 100%;
         height: auto;
-        display: flex;
         flex-direction: row;
-        position: relative;
         box-shadow: 0 8px 6px -6px black;
     }
 
@@ -211,11 +188,9 @@ header label,
 
     #header-text {
         height: auto;
-    }
-
-    h1 {
-        margin: 0;
-        padding: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
     }
 
     .menu-button {
@@ -228,6 +203,11 @@ header label,
         position: absolute;
         top: 100%;
         width: 100%;
+        text-align: center;
+    }
+
+    #nav a {
+        text-align: center;
     }
 
     #menu-trigger:checked + label > .open-button {
@@ -252,10 +232,7 @@ header label,
     }
 
     .about-flex-container {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 60px;
     }
 
     #about-text {
@@ -268,13 +245,16 @@ header label,
 }
 
 @media screen and (min-width: 601px) {
+    header {
+        flex-direction: column;
+        width: 200px;
+    }
+    
     #header-text { 
+        height: 200px;
         margin-top: 30px;
         margin-bottom: 30px;
-    }
-
-    h1, h2 {
-        text-align: left;
+        text-align: right;
     }
 
     header {
@@ -316,6 +296,11 @@ header label,
           transform: translateY(-15px);
         }
       }
+
+    #about img {
+        margin-top: 15px;
+        margin-left: 15px;
+    }
 }
 
 /*
