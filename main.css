@@ -17,7 +17,7 @@ header {
     z-index: 10;
     width: 200px;
     height: 100%;
-    background-color: #1C3E57;
+    background-color: #2D3A66;
 }
 
 #header-text {
@@ -30,7 +30,7 @@ header {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
-    color: #EACCB0;
+    color: #DFBD98;
 }
 
 #main-heading {
@@ -39,7 +39,7 @@ header {
 }
 
 #sub-heading {
-    color: #AA976F;
+    color: #B59874;
     font-size: 20px;
 }
 
@@ -62,81 +62,81 @@ h2 span {
 
 #nav {
     height: 100%;
-    background:#1C3E57;
+    background:#2D3A66;
     text-align: center;
-    border-top: 2px solid #4C6C81;
 }
 
 #nav a {
     display: block;
     text-decoration: none;
     text-align: center;
-    color:#AA976F;
+    color:#B59874;
     cursor: pointer;
     font-size: 20px;
     padding: 15px;
-    border-bottom: 2px solid #4C6C81;
 }
 
 #nav a:hover {
-    background-color: #EDF5E1;
-    color: #05386B;
-}
-
-#nav img {
-    height: 20px;
-    width: 20px;
+    color: #D2E6F3;
 }
 
 section {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #EACCB0;
-    color: #1C3E57;
+    height: auto;
+    padding: 15px;
+    background-color:#4E70A0;
+    color: #FFFFFF;
 }
 
+section h2 {
+    text-align: center;
+    font-size: 40px;
+}
 
 section:nth-child(even) {
-    background-color: #AA976F;
-    color: #1C3E57;
+    background-color: #5B4D58;
+    color: #FFFFFF;
 }
 
-#about,
-#skills {
+#hero {
+    height: 100vh;
+    padding: 0px;
+    background-image: url('hero-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: relative;
-    height: auto;
-    padding: 20px;
 }
 
-#about h2,
-#skills h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
+#hero h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    position: relative;
+    top: 50px;
+    font-size: 45px;
+    line-height: 60px;
     text-align: center;
-    padding-top: 15px;
-    height: 60px;
-    background-color: #1C3E57;
-    font-size: 40px;
-    width: 100%;
+    color:#2D3A66;
+    clear: right;
 }
 
-#skills h2{
-    color: #EACCB0;
+#driven {
+    color: #2D3A66;
+    background-color: #DFBD98;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
-#about h2 {
-    color: #AA976F;
+#difference {
+    text-decoration: underline;
+    text-decoration-color: #DFBD98;
 }
 
 .about-flex-container {
     display: flex;
     align-items: center;
-    margin-top: 60px;
 }
 
 #about p {
@@ -152,10 +152,8 @@ section:nth-child(even) {
 
 #skills h3 {
     margin-top: 20px;
-}
-
-#skills-container {
-    margin-top: 60px;
+    font-size: 25px;
+    text-align: center;
 }
 
 .skills-flex-container {
@@ -165,9 +163,11 @@ section:nth-child(even) {
 }
 
 .skill-logo {
-    border: 1px solid #1C3E57;
+    border: 1px solid #D2E6F3;
+    text-align: center;
     padding: 10px;
     margin: 10px;
+    background-color: rgba(255,255,255,.2)
 }
 
 footer {
@@ -175,8 +175,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #AA976F;
-    color: #1C3E57;
+    background-color: #2D3A66;
+    color: #B59874;
 }
 
 footer p {
@@ -220,7 +220,7 @@ header label,
 
     .menu-button {
         display: inline;
-        color: #EACCB0;
+        color: #DFBD98;
         font-size: 35px;
     }
 
@@ -285,43 +285,14 @@ header label,
         margin-left: 250px;
     }
 
-    #driven {
-        color: #1C3E57;
-        background-color: #EACCB0;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-
-    #difference {
-        text-decoration: underline;
-        text-decoration-color: #EACCB0;
-    }
-
-    #hero {
-        height: 100vh;
-        background-image: url('hero-image.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: relative;
-    }
-
-    #hero h2 {
-        font-family: 'Merriweather', serif;
-        font-weight: 700;
-        position: relative;
-        top: 50px;
-        font-size: 45px;
-        line-height: 60px;
-        text-align: center;
-        color:#1C3E57;
-        clear: right;
+    #nav a {
+        text-align: right;
+        padding-right: 23px;
     }
 
     #down-arrow {
         display: inline-block;
+        align-self: center;
         position: absolute;
         bottom: 15px;
         opacity: 0.6;
@@ -346,3 +317,21 @@ header label,
         }
       }
 }
+
+/*
+
+Light Khaki: DFBD98
+
+Dark Khaki: B59874
+
+Slate Blue: 2D3A66
+
+Slate Grey: 5B4D58
+
+Ligher Blue: 4E70A0
+
+Sky Blue: D2E6F3
+
+
+
+*/
