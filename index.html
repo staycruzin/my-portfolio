@@ -11,7 +11,6 @@
      <!-- Next Steps: Figure out how to make Nav dissapear once a button is clicked AND when you click anywhere else (probably need JavaScript for this)
           Also want to figure out how to transition out when closing it. -->
      <!-- Also figure out how to prevent #skills or w/e from appearing in the URI when clicked. (JavaScript event.preventDefault?)-->
-     <!-- Add a down arrow on the bottom of the hero image -->
      <!-- Fix issue between like 600 - 800 px where it doesn't shrink uniformly -->
      <header role="header">
           <input id="menu-trigger" type="checkbox"/>
@@ -26,20 +25,45 @@
           </div>
 
           <nav id="nav" class="nav" role="navigation">
-               <a href="#about">About</a>
-               <a href="#skills">Skills</a>
-               <a href="#projects">Projects</a>
-               <a href="#contact" class="bottom-nav-border">Contact</a>      
+               <a href="#about">
+                    <img src="assets/about-icon.png" />
+                    About
+               </a>
+               <a href="#skills">
+                    <img src="assets/skills-icon.png" />
+                    Skills
+               </a>
+               <a href="#projects">
+                    <img src="assets/projects-icon.png" />
+                    Projects
+               </a>
+               <a href="#contact">
+                    <img src="assets/email-icon.png" />
+                    Contact
+               </a>      
           </nav>
      </header>
 
      <main role="main">
           <section id="hero">
-               <h2><span id="driven">Driven</span> by the Desire<br>to <span id="difference">Make a Difference</span>.</h2>
+               <h2><span id="driven">Driven</span> by a Desire<br>to <span id="difference">Make a Difference</span>.</h2>
+               <a id="down-arrow" href="#about" ><img src="assets/down-arrow.png" /></a>
           </section>
 
           <section id="about">
                <h2>About</h2>
+               <p>I am a full-stack software developer based in San Diego, California who focuses on writing clean, elegant, and efficient code. 
+                    I love to code things from scratch and to watch my ideas come to life in the browser.
+               </p> 
+               <p>When I'm not coding, you'll probably find me somewhere enjoying the great outdoors. I've learned many valuable life lessons in the mountains, 
+                    and these values — from breaking out of my comfort zone to taking one step at a time — translate from the trail to the workplace. I am 
+                    constantly seeking out new ways to push the boundaries of my comfort zone and I perceive challenges as an opportunity to learn and grow. 
+                    Additionally, I have learned to embrace the journey and focus on taking one step at a time so that I can put myself in the best position to 
+                    achieve goals and deliver consistently through proper planning and by breaking down projects into smaller, manageable parts.
+               </p>
+               <p>I am passionate about building software that is making a difference in the world and I'm looking to make a big impact at a high growth company w
+                    here I can work on interesting projects with positive people. Let's make something special.
+               </p>
           </section>
 
           <section id="skills">
@@ -54,7 +78,6 @@
                <h2>Contact</h2>
           </section> 
      </main>
-
      <footer role="content-info"><p>Footer</p></footer>
 </body>
 </html>
