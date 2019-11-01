@@ -1,5 +1,6 @@
 * {
     font-family: 'Oswald', sans-serif;
+    font-weight: 400;
     padding: 0;
     margin: 0;
 }
@@ -43,6 +44,7 @@ header {
 
 h1, h2, h2 span {
     font-family: 'Merriweather', serif;
+    font-weight: 700;
     padding: 0;
     margin: 0;
 }
@@ -67,6 +69,10 @@ h1, h2, h2 span {
 
 .content-sections {
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 15px;
     background-color:#ECF5F7;
     color: #2D3A66;
@@ -79,7 +85,7 @@ h1, h2, h2 span {
 #hero {
     height: 100vh;
     padding: 0px;
-    background-image: url('hero-image.jpg');
+    background-image: url('assets/hero-image.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,23 +138,38 @@ h1, h2, h2 span {
 }
 
 #skills h3 {
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 20px;
 }
 
 .skills-flex-container {
     display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 5px #2D3A66;
+    margin-top: 50px;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.skills {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .skill-logo {
-    border: 1px solid #D2E6F3;
     text-align: center;
     padding: 10px;
-    margin: 10px;
-    background-color: rgba(255,255,255,.2)
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.skill-logo figcaption {
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 footer {
@@ -237,6 +258,10 @@ header label,
         flex-direction: column;
     }
 
+    .skills-flex-container {
+        width: 90%;
+    }
+
     #about img {
         margin: 0;
         margin-top: 15px;
@@ -271,10 +296,6 @@ header label,
         padding-right: 15px;
     }
 
-    .content-sections {
-        padding: 50px;
-    }
-
     #down-arrow {
         display: inline-block;
         align-self: center;
@@ -302,9 +323,17 @@ header label,
         }
       }
 
+    .content-sections {
+        padding: 50px;
+    }
+
     #about img {
         margin-top: 15px;
         margin-left: 15px;
+    }
+
+    .skills-flex-container {
+        width: 80%;
     }
 }
 
