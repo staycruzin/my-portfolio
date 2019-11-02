@@ -15,7 +15,6 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
-    height: 100%;
     background-color: #2D3A66;
 }
 
@@ -30,16 +29,11 @@ header {
 #main-heading {
     color: #DFBD98;
     font-family: 'Pacifico', cursive;
-    font-size: 35px;
     margin-right: 15px;
 }
 
 #sub-heading {
-    color: #ECF5F7;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    margin-top: 10px;
-    margin-right: 15px;
+    display: none;
 }
 
 h1, h2, h2 span {
@@ -78,10 +72,6 @@ h1, h2, h2 span {
     color: #2D3A66;
 }
 
-.content-sections h2 {
-    font-size: 45px;
-}
-
 #hero {
     height: 100vh;
     padding: 0px;
@@ -97,9 +87,7 @@ h1, h2, h2 span {
 
 #hero h2 {
     position: relative;
-    top: 50px;
-    font-size: 45px;
-    line-height: 60px;
+    top: 40px;
     text-align: center;
     color:#2D3A66;
 }
@@ -192,7 +180,7 @@ header label,
 @media screen and (max-width: 600px) {
     header {
         width: 100%;
-        height: auto;
+        height: 65px;
         flex-direction: row;
         box-shadow: 0 8px 6px -6px #2D3A66;
     }
@@ -206,16 +194,19 @@ header label,
     }
 
     #header-text {
-        height: auto;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        text-align: center;
+        height: inherit;
+    }
+
+    #main-heading {
+        font-size: 30px;
+        margin-bottom: 10px;
     }
 
     .menu-button {
-        display: inline;
+        display: inline-block;
         color: #DFBD98;
         font-size: 35px;
+        margin-bottom: 10px;
     }
 
     #nav {
@@ -251,7 +242,13 @@ header label,
     }
 
     #hero h2 {
-        margin-top: 40px;
+        margin-top: 45px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .content-sections h2 {
+        font-size: 30px;
     }
 
     .about-flex-container {
@@ -271,6 +268,7 @@ header label,
 @media screen and (min-width: 601px) {
     header {
         flex-direction: column;
+        height: 100%;
         width: 200px;
     }
     
@@ -287,6 +285,18 @@ header label,
         box-shadow: 2px 0 5px 0 #2D3A66;
     }
 
+    #main-heading {
+        font-size: 35px;
+    }
+    #sub-heading {
+        display: block;
+        color: #ECF5F7;
+        font-size: 20px;
+        font-family: 'Oswald', sans-serif;
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+
     main, footer {
         margin-left: 230px;
     }
@@ -294,6 +304,11 @@ header label,
     #nav a {
         text-align: right;
         padding-right: 15px;
+    }
+
+    #hero h2 {
+        font-size: 45px;
+        line-height: 60px;
     }
 
     #down-arrow {
@@ -325,6 +340,10 @@ header label,
 
     .content-sections {
         padding: 50px;
+    }
+
+    .content-sections h2 {
+        font-size: 45px;
     }
 
     #about img {
