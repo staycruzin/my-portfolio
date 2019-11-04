@@ -1,8 +1,9 @@
 * {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 }
 
 html, body {
@@ -23,17 +24,17 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 #main-heading {
     color: #DFBD98;
     font-family: 'Pacifico', cursive;
-    margin-right: 15px;
 }
 
 #sub-heading {
-    display: none;
+    display: block;
+    color: #ECF5F7;
+    font-family: 'Oswald', sans-serif;
 }
 
 h1, h2, h2 span {
@@ -53,8 +54,6 @@ h1, h2, h2 span {
     text-decoration: none;
     color:#ECF5F7;
     cursor: pointer;
-    font-size: 20px;
-    padding: 15px;
 }
 
 #nav a:hover {
@@ -150,7 +149,6 @@ h1, h2, h2 span {
 
 .skill-logo {
     text-align: center;
-    padding: 10px;
     margin-top: 30px;
     margin-bottom: 0;
 }
@@ -180,7 +178,7 @@ header label,
 @media screen and (max-width: 600px) {
     header {
         width: 100%;
-        height: 65px;
+        height: 64px;
         flex-direction: row;
         box-shadow: 0 8px 6px -6px #2D3A66;
     }
@@ -194,12 +192,18 @@ header label,
     }
 
     #header-text {
+        align-items: center;
         height: inherit;
+        border: 1px solid white;
     }
 
     #main-heading {
-        font-size: 30px;
+        font-size: 1.375em;
         margin-bottom: 10px;
+    }
+
+    #sub-heading {
+        font-size: 0.875em;
     }
 
     .menu-button {
@@ -262,10 +266,11 @@ header label,
     #about img {
         margin: 0;
         margin-top: 15px;
+        width: 90%;
     }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1001px) {
     header {
         flex-direction: column;
         height: 100%;
@@ -287,12 +292,11 @@ header label,
 
     #main-heading {
         font-size: 35px;
+        margin-right: 15px;
     }
+
     #sub-heading {
-        display: block;
-        color: #ECF5F7;
         font-size: 20px;
-        font-family: 'Oswald', sans-serif;
         margin-top: 10px;
         margin-right: 15px;
     }
@@ -303,7 +307,8 @@ header label,
 
     #nav a {
         text-align: right;
-        padding-right: 15px;
+        font-size: 20px;
+        padding: 15px;
     }
 
     #hero h2 {
