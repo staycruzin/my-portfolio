@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Pacifico|Oswald:300,400,500,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/89d96188b9.js" crossorigin="anonymous"></script>
 <body>
      <!-- Next Steps: Figure out how to make Nav dissapear once a button is clicked AND when you click anywhere else (probably need JavaScript for this)
           Also want to figure out how to transition out when closing it. -->
@@ -14,29 +15,35 @@
      <!-- Fix issue between like 600 - 800 px where it doesn't shrink uniformly -->
      <!-- Condense middle paragraph of about me text-->
      <!-- Figure out how to make it so that hero image in mobile is 100vh - Header (Alternatively: Move the h2 text down to compensate) -->
-     <header role="header">
-          <input id="menu-trigger" type="checkbox"/>
-          <label for="menu-trigger">
-               <span class="menu-button open-button">&#9776</span>
-               <span class="menu-button close-button">&#10005</span>
-          </label> 
-
+     <header role="header"> 
           <div id="header-text">
                <h1 id="main-heading">Anthony Cruz</h1>
                <h2 id="sub-heading">Full Stack Developer</h2>
           </div>
 
+          <input id="menu-trigger" type="checkbox"/>
+          <label for="menu-trigger">
+               <span class="menu-button open-button">&#9776</span>
+               <span class="menu-button close-button">&#10005</span>
+          </label>
+
           <nav id="nav" class="nav" role="navigation">
                <a href="#about">
+                    <i class="fas fa-user"></i>
                     About
                </a>
+
                <a href="#skills">
+                    <i class="fas fa-toolbox"></i>
                     Skills
                </a>
                <a href="#projects">
+                    <i class="fas fa-laptop-code"></i>
                     Projects
                </a>
                <a href="#contact">
+                    <i class="fas fa-envelope"></i>
+
                     Contact
                </a>      
           </nav>
@@ -143,6 +150,6 @@
                <h2>Contact</h2>
           </section> 
      </main>
-     <footer role="content-info">Footer</footer>
+     <footer role="content-info">&copy; 2019 Anthony Cruz</footer>
 </body>
 </html>

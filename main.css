@@ -31,12 +31,6 @@ header {
     font-family: 'Pacifico', cursive;
 }
 
-#sub-heading {
-    display: block;
-    color: #ECF5F7;
-    font-family: 'Oswald', sans-serif;
-}
-
 h1, h2, h2 span {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -71,20 +65,13 @@ h1, h2, h2 span {
     color: #2D3A66;
 }
 
-.content-sections h2 {
-    text-align: center;
-    width: 90%;
-    margin-bottom: 30px;
+.content-sections:nth-child(even) {
+    background-color: #ECF5F7;   
 }
 
-.content-sections h2:after {
-    content: ' ';
-    display: block;
-    height: 1px;
-    text-align: center;
-    margin-top: 5px;
-    background: #2D3A66;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(#ECF5F7), to(#ECF5F7), color-stop(50%, #2D3A66));
+.content-sections h2 {
+    width: 90%;
+    margin-bottom: 15px;
 }
 
 #hero {
@@ -146,26 +133,26 @@ h1, h2, h2 span {
     flex-direction: column;
     background-color: white;
     box-shadow: 0 0 5px #2D3A66;
-    padding: 40px 20px;
+    padding: 40px 0px;
     text-align: left;
     margin-bottom: 30px;
 }
 
 .skills {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0px;
 }
 
 .skill-logo {
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 0;
+    margin: 10px;
 }
 
 .skill-logo figcaption {
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 footer {
@@ -173,9 +160,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    background-color: #ECF5F7;
-    color: #2D3A66;
+    font-size: 1.125em;
 }
 
 header input,
@@ -202,16 +187,17 @@ header label,
     }
 
     #header-text {
-        align-items: center;
+        align-items: flex-start;
+        margin-left: 10px;
         height: inherit;
     }
 
     #main-heading {
-        font-size: 1.375em;
+        font-size: 1.625em;
     }
 
     #sub-heading {
-        font-size: 0.875em;
+        display: none;
     }
 
     .menu-button {
@@ -223,13 +209,13 @@ header label,
 
     #nav {
         position: absolute;
-        top: 65px;
+        top: 63px;
         width: 100%;
         text-align: center;
     }
 
     #nav a {
-        font-size: 0.875em;
+        font-size: 1.125em;
         text-align: center;
         padding: 10px;
     }
@@ -256,14 +242,17 @@ header label,
     }
 
     #hero h2 {
-        margin-top: 65px;
+        margin-top: 64px;
         font-size: 1.875em;
         line-height: 40px;
     }
 
     .content-sections h2 {
-        font-size: 30px;
+        margin-top: 64px;
+        font-size: 1.875em;
+        margin-bottom: 20px;
     }
+
 
     #about p {
         font-size: 1.125em;
@@ -274,6 +263,7 @@ header label,
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 64px;
     }
 
     #about-text {
@@ -288,6 +278,11 @@ header label,
         margin: 0;
         margin-top: 15px;
         width: 90%;
+    }
+
+    footer {
+        background-color:#2D3A66;
+        color: #ECF5F7;
     }
 }
 
@@ -317,6 +312,9 @@ header label,
     }
 
     #sub-heading {
+        display: block;
+        color: #ECF5F7;
+        font-family: 'Oswald', sans-serif;
         font-size: 1.250em;
         margin-top: 10px;
         margin-right: 15px;
@@ -395,6 +393,11 @@ header label,
 
     .skills-flex-container {
         width: 75%;
+    }
+
+    footer {
+        background-color: #ECF5F7;
+        color: #2D3A66;
     }
 }
 
