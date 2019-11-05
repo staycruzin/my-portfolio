@@ -13,6 +13,7 @@ html {
 p {
     font-size: 1.8rem;
     line-height: 2.4rem;
+    font-weight: 300;
 }
 
 html, body {
@@ -89,6 +90,10 @@ h1, h2, h2 span {
 
 #nav a:hover {
     color: #DFBD98;
+}
+
+#nav .fas {
+    margin-right: 5px;
 }
 
 .content-sections {
@@ -208,6 +213,41 @@ h1, h2, h2 span {
     margin-top: 5px;
 }
 
+.contact-flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#contact a {
+    font-size: 1.8rem;
+    text-decoration-line: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.contact-link {
+    color: #2D3A66;
+    font-weight: 300;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-spacing {
+    margin-bottom: 15px;
+}
+
+#contact .fab,
+#contact .fas {
+    margin-right: 5px;
+    font-size: 3.0rem;
+    color: #B59874;
+}
+
 footer {
     height: 64px;
     display: flex;
@@ -243,6 +283,12 @@ header input,
     }
 }
 
+@media screen and (max-height: 415px) {
+    #hero h2 {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #main-heading {
         font-size: 3.2rem;
@@ -253,7 +299,7 @@ header input,
     }
 
     #hero h2 {
-        top: 70px;
+        top: 85px;
         font-size: 4.5rem;
         line-height: 6.0rem;
     }
@@ -263,11 +309,10 @@ header input,
         width: 75%;
     }
 
-    .about-flex-container {
-        width: 75%;
-    }
-
-    .skills-flex-container {
+    .about-flex-container,
+    .skills-flex-container,
+    .contact-flex-container
+     {
         width: 75%;
     }
 }
@@ -419,7 +464,8 @@ header input,
         margin-left: 15px;
     }
 
-    .skills-flex-container {
+    .skills-flex-container,
+    .contact-flex-container {
         width: 90%;
     }
 
@@ -427,24 +473,30 @@ header input,
         justify-content: space-evenly;
     }
 
+    #contact a {
+        font-size: 2.0rem;
+    }
+
+    #contact .fab,
+    #contact .fas {
+        font-size: 3.4rem;
+        margin-right: 10px;
+    }
+
     footer {
         font-size: 2.0rem;
         background-color: #ECF5F7;
         color: #2D3A66;
     }
-}
 
 @media screen and (min-width: 1600px) {
     .content-sections h2 {
         width: 75%;
     }
 
-    .about-flex-container {
-        width: 75%;
-        flex-direction: row;
-    }
-
-    .skills-flex-container {
+    .about-flex-container,
+    .skills-flex-container,
+    .contact-flex-container {
         width: 75%;
     }
 }
