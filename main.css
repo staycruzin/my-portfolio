@@ -6,29 +6,59 @@
     font-weight: 400;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
 html, body {
     height: 100%;
 }
 
 header {
+    width: 100%;
+    height: 64px;
     display: flex;
+    flex-direction: row;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     background-color: #2D3A66;
+    box-shadow: 0 8px 6px -6px #2D3A66;
 }
 
-#header-text {
-    width: 100%;
+header label {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: auto;
 }
 
 #main-heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: #DFBD98;
     font-family: 'Pacifico', cursive;
+    font-size: 2.6rem;
+}
+
+#sub-heading {
+    display: none;
+}
+
+.menu-button {
+    width: 45px;
+    padding: 0 7px 7px 7px;
+    text-align: center;
+    color: #DFBD98;
+    font-size: 2.6em;
 }
 
 h1, h2, h2 span {
@@ -39,13 +69,20 @@ h1, h2, h2 span {
 }
 
 #nav {
+    position: absolute;
+    top: 63px;
     height: 100%;
+    width: 100%;
+    text-align: center;
     background:#2D3A66;
 }
 
 #nav a {
     display: block;
     text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 10px;
     color:#ECF5F7;
     cursor: pointer;
 }
@@ -60,7 +97,7 @@ h1, h2, h2 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 70px 15px;
     background-color:#FFFFFF;
     color: #2D3A66;
 }
@@ -70,8 +107,10 @@ h1, h2, h2 span {
 }
 
 .content-sections h2 {
-    width: 90%;
+    font-size: 2.6rem;
     margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
 }
 
 #hero {
@@ -89,8 +128,10 @@ h1, h2, h2 span {
 
 #hero h2 {
     position: relative;
-    top: 40px;
+    top: 80px;
     text-align: center;
+    font-size: 2.6rem;
+    line-height: 3.4rem;
     color:#2D3A66;
 }
 
@@ -107,6 +148,12 @@ h1, h2, h2 span {
 
 .about-flex-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about img {
+    margin-top: 15px;
 }
 
 .text-emphasis {
@@ -122,26 +169,31 @@ h1, h2, h2 span {
 }
 
 #skills h3 {
-    font-size: 30px;
+    font-size: 2.2rem;
     font-weight: 300;
-    margin-left: 20px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .skills-flex-container {
     display: flex;
     height: 100%;
+    width: 100%;
     flex-direction: column;
-    background-color: white;
+    background-color: #FFFFFF;
     box-shadow: 0 0 5px #2D3A66;
-    padding: 40px 0px;
+    padding: 20px 10px;
     text-align: left;
-    margin-bottom: 30px;
+}
+
+.skills-flex-spacing {
+    margin-bottom: 25px;
 }
 
 .skills {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0px;
 }
 
@@ -151,6 +203,7 @@ h1, h2, h2 span {
 }
 
 .skill-logo figcaption {
+    font-size: 1.4rem;
     font-weight: 300;
     margin-top: 5px;
 }
@@ -160,66 +213,66 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.125em;
+    font-size: 1.8rem;
+    background-color:#2D3A66;
+    color: #ECF5F7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 header input,
-header label,
-#down-arrow,
-.menu-button {
+#down-arrow {
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
-    header {
-        width: 100%;
-        height: 64px;
-        flex-direction: row;
-        box-shadow: 0 8px 6px -6px #2D3A66;
-    }
-
-    header label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: inherit;
-        width: 63px;
-    }
-
-    #header-text {
-        align-items: flex-start;
-        margin-left: 10px;
-        height: inherit;
-    }
-
+@media screen and (min-width: 375px) {
     #main-heading {
-        font-size: 1.625em;
-    }
-
-    #sub-heading {
-        display: none;
+        font-size: 3.2rem;
     }
 
     .menu-button {
-        display: inline-block;
-        color: #DFBD98;
-        font-size: 2.188em;
-        margin-bottom: 10px;
+        font-size: 3.2rem;
     }
 
-    #nav {
-        position: absolute;
-        top: 63px;
-        width: 100%;
-        text-align: center;
+    #hero h2 {
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main-heading {
+        font-size: 3.2rem;
     }
 
-    #nav a {
-        font-size: 1.125em;
-        text-align: center;
-        padding: 10px;
+    .menu-button {
+        font-size: 3.2rem;
     }
 
+    #hero h2 {
+        top: 70px;
+        font-size: 4.5rem;
+        line-height: 6.0rem;
+    }
+
+    .content-sections h2 {
+        font-size: 4.5rem;
+        width: 75%;
+    }
+
+    .about-flex-container {
+        width: 75%;
+    }
+
+    .skills-flex-container {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
     #menu-trigger:checked + label > .open-button {
         display: none;
     }
@@ -240,63 +293,27 @@ header label,
         overflow: hidden;
         transform:scaleY(0);
     }
-
-    #hero h2 {
-        margin-top: 64px;
-        font-size: 1.875em;
-        line-height: 40px;
-    }
-
-    .content-sections h2 {
-        margin-top: 64px;
-        font-size: 1.875em;
-        margin-bottom: 20px;
-    }
-
-
-    #about p {
-        font-size: 1.125em;
-        line-height: 30px;
-    }
-
-    .about-flex-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 64px;
-    }
-
-    #about-text {
-        width: 90%;
-    }
-
-    .skills-flex-container {
-        width: 90%;
-    }
-
-    #about img {
-        margin: 0;
-        margin-top: 15px;
-        width: 90%;
-    }
-
-    footer {
-        background-color:#2D3A66;
-        color: #ECF5F7;
-    }
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1200px) {
+    .menu-button,
+    header label {
+        display: none;
+    }
+
     header {
         flex-direction: column;
         height: 100%;
+        box-shadow: none;
         width: 200px;
     }
-    
-    #header-text { 
+
+    #header-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         height: 200px;
-        margin-top: 30px;
-        margin-bottom: 30px;
         text-align: right;
         align-items: flex-end;
     }
@@ -307,7 +324,9 @@ header label,
     }
 
     #main-heading {
-        font-size: 2.188em;
+        position: static;
+        transform: translate(0%, 0%);
+        font-size: 3.2rem;
         margin-right: 15px;
     }
 
@@ -315,7 +334,8 @@ header label,
         display: block;
         color: #ECF5F7;
         font-family: 'Oswald', sans-serif;
-        font-size: 1.250em;
+        font-size: 2.4rem;
+        font-weight: 300;
         margin-top: 10px;
         margin-right: 15px;
     }
@@ -324,15 +344,26 @@ header label,
         margin-left: 230px;
     }
 
+    #nav {
+        position: static;
+    }
+
     #nav a {
         text-align: right;
-        font-size: 20px;
+        font-size: 2.0rem;
+        font-weight: 300;
         padding: 15px;
     }
 
+    p {
+        font-size: 2.0rem;
+        line-height: 3.0rem;
+    }
+
     #hero h2 {
-        font-size: 45px;
-        line-height: 60px;
+        top: 30px;
+        font-size: 4.5rem;
+        line-height: 6.0rem;
     }
 
     #down-arrow {
@@ -367,37 +398,54 @@ header label,
     }
 
     .content-sections h2 {
-        font-size: 45px;
+        font-size: 4.5rem;
+        width: 90%;
     }
 
     .about-flex-container {
         width: 90%;
-        justify-content: center;
+        flex-direction: row;
     }
 
     #about-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 40%;
-    }
-
-    #about p {
-        font-size: 1.250em;
-        line-height: 30px;
+        width: 100%;
     }
 
     #about img {
+        margin-top: 0px;
         margin-left: 15px;
     }
 
     .skills-flex-container {
-        width: 75%;
+        width: 90%;
+    }
+
+    .skills {
+        justify-content: space-evenly;
     }
 
     footer {
+        font-size: 2.0rem;
         background-color: #ECF5F7;
         color: #2D3A66;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .content-sections h2 {
+        width: 75%;
+    }
+
+    .about-flex-container {
+        width: 75%;
+        flex-direction: row;
+    }
+
+    .skills-flex-container {
+        width: 75%;
     }
 }
 
