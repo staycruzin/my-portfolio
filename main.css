@@ -166,7 +166,8 @@ header {
 
 .about-flex-container,
 .skills-flex-container,
-.projects-flex-container {
+.projects-flex-container,
+.contact-flex-container {
     display: flex;
     flex-direction: column;
 }
@@ -264,10 +265,10 @@ header {
 }
 
 .btn {
-    /* remove background and border none if it does not fix issue */
     background: none;
     border: none;
     color: #ECF5F7;
+    font-weight: 400;
     cursor: pointer;
     width: 12rem;
     height: 4rem;
@@ -300,8 +301,6 @@ header {
 }
 
 .contact-flex-container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
 }
@@ -323,18 +322,19 @@ header {
 }
 
 .contact-spacing {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 #contact .fab,
 #contact .fas {
-    margin-right: 5px;
+    margin-right: 0.5rem;
     font-size: 3.0rem;
     color: #B59874;
 }
 
 footer {
     height: 64px;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -419,6 +419,11 @@ img {
         display: none;
     }
 
+    p {
+        font-size: 2.0rem;
+        line-height: 3.0rem;
+    }
+
     main, footer {
         margin-left: 215px;
     }
@@ -436,7 +441,7 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 200px;
+        height: 20rem;
         text-align: right;
         align-items: flex-end;
     }
@@ -445,7 +450,7 @@ img {
         position: static;
         transform: translate(0%, 0%);
         font-size: 3.2rem;
-        margin-right: 15px;
+        margin-right: 1.5rem;
     }
 
     #sub-heading {
@@ -454,8 +459,8 @@ img {
         font-family: 'Oswald', sans-serif;
         font-size: 2.4rem;
         font-weight: 300;
-        margin-top: 10px;
-        margin-right: 15px;
+        margin-top: 1rem;
+        margin-right: 1.5rem;
     }
 
     #nav {
@@ -465,12 +470,7 @@ img {
     #nav a {
         text-align: right;
         font-size: 2.0rem;
-        padding: 15px;
-    }
-
-    p {
-        font-size: 2.0rem;
-        line-height: 3.0rem;
+        padding: 1.5rem;
     }
 
     #hero h2 {
@@ -511,8 +511,8 @@ img {
     }
 
     #about img {
-        margin-top: 0px;
-        margin-left: 15px;
+        margin-top: 0;
+        margin-left: 1.5rem;
     }
 
     .content-sections {
@@ -563,7 +563,6 @@ img {
 
     .btn:hover {
         transform: translate(0.5rem, 0.5rem);
-        color: #ECF5F7;
     }
     
     .btn:hover::before {
@@ -582,7 +581,7 @@ img {
     #contact .fab,
     #contact .fas {
         font-size: 4.0rem;
-        margin-right: 10px;
+        margin-right: 1rem;
     }
 
     footer {
@@ -601,17 +600,12 @@ img {
 
 
 /*
-
-Light Khaki: DFBD98
+Color Scheme: 
 
 Dark Khaki: B59874
 
-Slate Blue: 2D3A66
+Mountain Blue: 2D3A66
 
-Slate Grey: 5B4D58
-
-Ligher Blue: 4E70A0
-
-Sky Blue: D2E6F3
+Sky Blue: ECF5F7
 
 */
