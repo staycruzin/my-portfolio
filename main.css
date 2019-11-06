@@ -59,7 +59,7 @@ header label {
     padding: 0 7px 7px 7px;
     text-align: center;
     color: #DFBD98;
-    font-size: 2.6em;
+    font-size: 2.6rem;
 }
 
 h1, h2, h2 span {
@@ -159,6 +159,7 @@ h1, h2, h2 span {
 
 #about img {
     margin-top: 15px;
+    border-radius: 8px;
 }
 
 .text-emphasis {
@@ -173,11 +174,14 @@ h1, h2, h2 span {
     color:#2D3A66;
 }
 
-#skills h3 {
+h3 {
     font-size: 2.2rem;
     font-weight: 300;
-    text-align: center;
     margin-bottom: 10px;
+}
+
+#skills h3 {
+    text-align: center;
 }
 
 .skills-flex-container {
@@ -211,6 +215,85 @@ h1, h2, h2 span {
     font-size: 1.4rem;
     font-weight: 300;
     margin-top: 5px;
+}
+
+.projects-flex-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #2D3A66;
+}
+
+.project-name {
+    font-weight: 400;
+}
+
+.project-description {
+    margin-bottom: 1rem;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: row;
+    align-self: center;
+}
+
+.tech-stack li {
+    list-style: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid #2D3A66;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    color: #ECF5F7;
+    cursor: pointer;
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+    margin: 1rem;
+    z-index: 0;
+}
+
+.btn::before,
+.btn::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+}
+
+.btn::before {
+    background-color: #2D3A66;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    background-color: #B59874;
+    transform: translate(0.5rem, 0.5rem);
+    z-index: -2;
 }
 
 .contact-flex-container {
@@ -307,7 +390,8 @@ header input,
 
     .about-flex-container,
     .skills-flex-container,
-    .contact-flex-container
+    .contact-flex-container,
+    .projects-flex-container
      {
         width: 75%;
     }
@@ -449,9 +533,6 @@ header input,
     }
 
     #about-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         width: 100%;
     }
 
@@ -461,12 +542,55 @@ header input,
     }
 
     .skills-flex-container,
-    .contact-flex-container {
+    .contact-flex-container,
+    .projects-flex-container {
         width: 90%;
+    }
+
+    .projects-flex-container {
+        flex-direction: row;
+    }
+
+    .project-image {
+        width: 50%;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .project-buttons {
+        justify-content: space-evenly;
     }
 
     .skills {
         justify-content: space-evenly;
+    }
+
+    .btn {
+        transition: 0.3s;
+    }
+
+    .btn::before,
+    .btn::after {
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: translate(0.5rem, 0.5rem);
+        color: #ECF5F7;
+    }
+    
+    .btn:hover::before {
+        background-color: #B59874;
+    }
+    
+    .btn:hover::after {
+        background-color: #2D3A66;
+        transform: translate(-0.5rem, -0.5rem);
     }
 
     #contact a {
@@ -484,18 +608,21 @@ header input,
         background-color: #ECF5F7;
         color: #2D3A66;
     }
+}
 
 @media screen and (min-width: 1600px) {
     .content-sections h2 {
-        width: 75%;
+        width: 60%;
     }
 
     .about-flex-container,
     .skills-flex-container,
-    .contact-flex-container {
-        width: 75%;
+    .contact-flex-container,
+    .projects-flex-container {
+        width: 60%;
     }
 }
+
 
 /*
 
@@ -510,7 +637,5 @@ Slate Grey: 5B4D58
 Ligher Blue: 4E70A0
 
 Sky Blue: D2E6F3
-
-
 
 */
