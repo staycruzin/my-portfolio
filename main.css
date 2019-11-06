@@ -269,10 +269,6 @@ header input,
 }
 
 @media screen and (min-width: 375px) {
-    #main-heading {
-        font-size: 3.2rem;
-    }
-
     .menu-button {
         font-size: 3.2rem;
     }
@@ -479,7 +475,7 @@ header input,
 
     #contact .fab,
     #contact .fas {
-        font-size: 3.4rem;
+        font-size: 4.0rem;
         margin-right: 10px;
     }
 
