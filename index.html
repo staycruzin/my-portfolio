@@ -17,7 +17,7 @@
      <!-- Figure out how to make it so that hero image in mobile is 100vh - Header (Alternatively: Move the h2 text down to compensate) -->
      <header role="header"> 
           <input id="menu-trigger" type="checkbox"/>
-          <label for="menu-trigger">
+          <label id="hamburger-menu" for="menu-trigger">
                <span class="menu-button open-button">&#9776</span>
                <span class="menu-button close-button">&#10005</span>
           </label>
@@ -56,14 +56,13 @@
           </section>
 
           <section class="content-sections" id="about">
-               <h2>About</h2>
+               <h2 class="container-width">About</h2>
                
-               <div class="about-flex-container">
+               <section class="about-flex-container container-width">
                     <div id="about-text">
                          <p>I am a full-stack software developer based in San Diego, California who focuses on writing <span class="text-emphasis">clean</span>, <span class="text-emphasis">elegant</span>, and 
                               <span class="text-emphasis">efficient</span> code. I love to code things from scratch and watch my ideas come to life in the browser.
                          </p>
-                         <br>
                          <br>
                          <p>When I'm not coding, you'll probably find me somewhere enjoying the great outdoors. I've learned many valuable life lessons in the mountains, 
                               and these values — from breaking out of my comfort zone to taking one step at a time — translate from the trail to the workplace. I am 
@@ -78,13 +77,13 @@
                     </div>
 
                     <img src="assets/portrait.jpg" alt="Portrait of Anthony" />
-               </div>
+               </section>
           </section>
 
           <section class="content-sections" id="skills">
-               <h2>Skills</h2>
+               <h2 class="container-width">Skills</h2>
 
-               <div class="skills-flex-container skills-flex-spacing">
+               <section class="skills-flex-container skills-flex-spacing container-width">
                     <h3>Front-End</h3>
 
                     <div class="skills">
@@ -105,9 +104,9 @@
                               <figcaption>jQuery</figcaption>
                          </figure>
                     </div>
-               </div>
+               </section>
 
-               <div class="skills-flex-container skills-flex-spacing">
+               <section class="skills-flex-container skills-flex-spacing container-width">
                     <h3>Back-End</h3>
 
                          <div class="skills">
@@ -128,10 +127,10 @@
                               <figcaption>MySQL</figcaption>
                          </figure>
                     </div>
-               </div>
+               </section>
 
                
-               <div class="skills-flex-container">
+               <section class="skills-flex-container container-width">
                     <h3>Miscellaneous</h3>
                     
                     <div class="skills">
@@ -140,13 +139,13 @@
                               <figcaption>GitHub</figcaption>
                          </figure>
                     </div>
-               </div>
+               </section>
           </section>
 
           <section class="content-sections" id="projects">
-               <h2>Projects</h2>
+               <h2 class="container-width">Projects</h2>
 
-               <section class="projects-flex-container">
+               <section class="projects-flex-container container-width">
                     <div class="project-image">
                          <img src="assets/quiz-app-screenshot.png" alt="Quiz App Screenshot" />
                     </div>
@@ -170,9 +169,9 @@
           </section>
 
           <section class="content-sections" id="contact">
-               <h2>Contact</h2>
+               <h2 class="container-width">Contact</h2>
 
-               <div class="contact-flex-container">
+               <section class="contact-flex-container container-width">
                     <a class="contact-spacing" href="mailto:anthonyncruz@gmail.com">
                          <i class="fas fa-envelope-square"></i>
                          <span class="contact-link">anthonyncruz@gmail.com</span>
@@ -186,7 +185,7 @@
                          <i class="fab fa-github-square"></i>
                          <span class="contact-link">github.com/staycruzin</span>
                     </a>
-               </div>
+               </section>
           </section> 
      </main>
      <footer role="content-info">&copy; 2019 Anthony Cruz</footer>
