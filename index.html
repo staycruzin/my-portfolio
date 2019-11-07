@@ -9,18 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Pacifico|Oswald:300,400,500,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/89d96188b9.js" crossorigin="anonymous"></script>
 <body>
-     <!-- Next Steps: Figure out how to make Nav dissapear once a button is clicked AND when you click anywhere else (probably need JavaScript for this)
-          Also want to figure out how to transition out when closing it. -->
-     <!-- Also figure out how to prevent #skills or w/e from appearing in the URI when clicked. (JavaScript event.preventDefault?)-->
-     <!-- Fix issue between like 600 - 800 px where it doesn't shrink uniformly -->
-     <!-- Condense middle paragraph of about me text-->
-     <!-- Figure out how to make it so that hero image in mobile is 100vh - Header (Alternatively: Move the h2 text down to compensate) -->
      <header role="header"> 
-          <input id="menu-trigger" type="checkbox"/>
-          <label id="hamburger-menu" for="menu-trigger">
-               <span class="menu-button open-button">&#9776</span>
-               <span class="menu-button close-button">&#10005</span>
-          </label>
+          <span class="menu-button open-button">&#9776</span>
+          <span class="menu-button close-button">&#10005</span>
 
           <div id="header-text">
                <h1 id="main-heading">Anthony Cruz</h1>
@@ -28,20 +19,20 @@
           </div>
 
           <nav id="nav" class="nav" role="navigation">
-               <a href="#about">
+               <a class="menu-item" href="#about">
                     <i class="fas fa-user"></i>
                     About
                </a>
 
-               <a href="#skills">
+               <a class="menu-item" href="#skills">
                     <i class="fas fa-toolbox"></i>
                     Skills
                </a>
-               <a href="#projects">
+               <a class="menu-item" href="#projects">
                     <i class="fas fa-laptop-code"></i>
                     Projects
                </a>
-               <a href="#contact">
+               <a class="menu-item" href="#contact">
                     <i class="fas fa-envelope"></i>
 
                     Contact
@@ -88,19 +79,27 @@
 
                     <div class="skills">
                          <figure class="skill-logo">
-                              <img src="assets/html5.png" alt="HTML5 Logo" />
+                              <div class="img-container">
+                                   <img src="assets/html5.png" alt="HTML5 Icon" />
+                              </div>
                               <figcaption>HTML5</figcaption>
                          </figure>
                          <figure class="skill-logo">
-                              <img src="assets/css3.png" alt="CSS3 Logo" />
+                              <div class="img-container">
+                                   <img src="assets/css3.png" alt="CSS3 Icon" />
+                              </div>
                               <figcaption>CSS3</figcaption>
                          </figure>
                          <figure class="skill-logo">
-                              <img src="assets/javascript.png" alt="JavaScript Logo" />
+                              <div class="img-container">
+                                   <img src="assets/javascript.png" alt="JavaScript Icon" />
+                              </div>
                               <figcaption>JavaScript</figcaption>
                          </figure>
                          <figure class="skill-logo">
-                              <img src="assets/jquery.png" alt="jQuery Logo" />
+                              <div class="img-container">
+                                   <img src="assets/jquery.png" alt="jQuery Icon" />
+                              </div>
                               <figcaption>jQuery</figcaption>
                          </figure>
                     </div>
@@ -111,19 +110,27 @@
 
                          <div class="skills">
                          <figure class="skill-logo">
-                              <img src="assets/java.png" alt="Java Logo" />
+                              <div class="img-container">
+                                   <img src="assets/java.png" alt="Java Icon" />
+                              </div>
                               <figcaption>Java</figcaption>
                          </figure>
                          <figure class="skill-logo">
-                              <img src="assets/spring5.png" alt="Spring 5 Logo" />
+                              <div class="img-container">
+                                   <img src="assets/spring5.png" alt="Spring 5 Icon" />
+                              </div>
                               <figcaption>Spring 5</figcaption>
                          </figure>
                          <figure class="skill-logo">
-                              <img src="assets/springboot2.png" alt="Spring Boot 2 Logo" />
+                              <div class="img-container">
+                                   <img src="assets/springboot2.png" alt="Spring Boot 2 Icon" />
+                              </div>
                               <figcaption>Spring Boot 2</figcaption>
                          </figure>
                          <figure class="skill-logo">
-                              <img src="assets/mysql.png" alt="MySQL Logo" />
+                              <div class="img-container">
+                                   <img src="assets/mysql.png" alt="MySQL Icon" />
+                              </div>
                               <figcaption>MySQL</figcaption>
                          </figure>
                     </div>
@@ -135,7 +142,9 @@
                     
                     <div class="skills">
                          <figure class="skill-logo">
-                              <img src="assets/github.png" alt="GitHub Logo" />
+                              <div class="img-container">
+                                   <img src="assets/github.png" alt="GitHub Logo" />
+                              </div>
                               <figcaption>GitHub</figcaption>
                          </figure>
                     </div>
@@ -161,8 +170,8 @@
                               <li>jQuery</li>
                          </ul>
                          <div class="project-buttons">
-                              <a href="https://staycruzin.github.io/national-parks-quiz/" target="_blank"><button class="btn">Demo</button></a>
-                              <a href="https://github.com/staycruzin/national-parks-quiz" target="_blank"><button class="btn">Code</button></a>
+                              <a href="https://staycruzin.github.io/national-parks-quiz/" target="_blank"><button class="project-button">Demo</button></a>
+                              <a href="https://github.com/staycruzin/national-parks-quiz" target="_blank"><button class="project-button">Code</button></a>
                          </div>
                     </div>
                </section>
@@ -189,5 +198,8 @@
           </section> 
      </main>
      <footer role="content-info">&copy; 2019 Anthony Cruz</footer>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="index.js"></script>
 </body>
 </html>
