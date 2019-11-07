@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <title>Anthony Cruz | Full Stack Developer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Pacifico|Oswald:300,400,500,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/89d96188b9.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Pacifico|Oswald:300,400&display=swap" />
+</head>
 <body>
-     <header role="header"> 
-          <span class="menu-button open-button">&#9776</span>
-          <span class="menu-button close-button">&#10005</span>
+     <header> 
+          <span class="menu-button open-button" role="button" tabindex="0" aria-expanded="false" aria-controls="nav">&#9776;</span>
+          <span class="menu-button close-button" role="button" tabindex="0" aria-expanded="true" aria-controls="nav">&#10005;</span>
 
           <div id="header-text">
                <h1 id="main-heading">Anthony Cruz</h1>
                <h2 id="sub-heading">Full Stack Developer</h2>
           </div>
 
-          <nav id="nav" class="nav" role="navigation">
+          <nav id="nav" class="nav">
                <a class="menu-item" href="#about">
                     <i class="fas fa-user"></i>
                     About
@@ -40,16 +41,16 @@
           </nav>
      </header>
 
-     <main role="main">
+     <main>
           <section id="hero">
                <h2><span id="driven-emphasis">Driven</span> by a Desire<br>to <span id="difference-emphasis">Make a Difference</span>.</h2>
-               <a id="down-arrow" href="#about" ><img src="assets/down-arrow.png" /></a>
+               <a id="down-arrow" href="#about" ><img src="assets/down-arrow.png" alt="Down Arrow"/></a>
           </section>
 
           <section class="content-sections" id="about">
                <h2 class="container-width">About</h2>
                
-               <section class="about-flex-container container-width">
+               <div class="about-flex-container container-width">
                     <div id="about-text">
                          <p>I am a full-stack software developer based in San Diego, California who focuses on writing <span class="text-emphasis">clean</span>, <span class="text-emphasis">elegant</span>, and 
                               <span class="text-emphasis">efficient</span> code. I love to code things from scratch and watch my ideas come to life in the browser.
@@ -68,7 +69,7 @@
                     </div>
 
                     <img src="assets/portrait.jpg" alt="Portrait of Anthony" />
-               </section>
+               </div>
           </section>
 
           <section class="content-sections" id="skills">
@@ -170,8 +171,8 @@
                               <li>jQuery</li>
                          </ul>
                          <div class="project-buttons">
-                              <a href="https://staycruzin.github.io/national-parks-quiz/" target="_blank"><button class="project-button">Demo</button></a>
-                              <a href="https://github.com/staycruzin/national-parks-quiz" target="_blank"><button class="project-button">Code</button></a>
+                              <a class="project-button" role="button" href="https://staycruzin.github.io/national-parks-quiz/" target="_blank">Demo</a>
+                              <a class="project-button" role="button" href="https://github.com/staycruzin/national-parks-quiz" target="_blank">Code</a>
                          </div>
                     </div>
                </section>
@@ -180,7 +181,7 @@
           <section class="content-sections" id="contact">
                <h2 class="container-width">Contact</h2>
 
-               <section class="contact-flex-container container-width">
+               <div class="contact-flex-container container-width">
                     <a class="contact-spacing" href="mailto:anthonyncruz@gmail.com">
                          <i class="fas fa-envelope-square"></i>
                          <span class="contact-link">anthonyncruz@gmail.com</span>
@@ -194,10 +195,10 @@
                          <i class="fab fa-github-square"></i>
                          <span class="contact-link">github.com/staycruzin</span>
                     </a>
-               </section>
+               </div>
           </section> 
      </main>
-     <footer role="content-info">&copy; 2019 Anthony Cruz</footer>
+     <footer>&copy; 2019 Anthony Cruz</footer>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="index.js"></script>
