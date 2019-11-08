@@ -2,32 +2,18 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+    border: 0;
 }
 
-html {
-    font-size: 10px;
-}
-
-html, body {
-    height: 100%;
-}
-
-#sub-heading,
+#sub-heading, 
 #down-arrow {
     display: none;
 }
 
-p,
-a,
-.project-button,
-footer {
-    font-size: 1.8rem;
-}
-
-p {
-    line-height: 2.4rem;
+body {
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
 }
 
 h1, h2, h2 span {
@@ -37,14 +23,26 @@ h1, h2, h2 span {
     margin: 0;
 }
 
-h3 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+h1 {
+    font-size: 1.444rem;
 }
 
-#main-heading,
-.menu-button {
-    font-size: 2.6rem;
+h2 {
+    font-size: 1.444rem;
+}
+
+h3 {
+    font-size: 1.333rem;
+    font-weight: 400;
+}
+
+.skill-logo figcaption,
+.tech-stack li {
+    font-size: 0.8889rem;
+}
+
+p {
+    line-height: 1.333rem;
 }
 
 header {
@@ -57,10 +55,9 @@ header {
     left: 0;
     z-index: 10;
     background-color: #2D3A66;
-    box-shadow: 0 8px 6px -6px #2D3A66;
 }
 
-#main-heading {
+h1 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -76,8 +73,9 @@ header {
     outline: 0;
     justify-content: center;
     align-items: center;
-    padding: 0 0.5em 0.2em 0.5em;
+    padding: 0 10px 2px 10px;
     color: #DFBD98;
+    font-size: 1.778rem;
     transition: all .2s ease-in-out;
 }
 
@@ -100,7 +98,7 @@ header {
     display: block;
     width: max-content;
     text-decoration: none;
-    padding: 1rem;
+    padding: 10px;
     color:#ECF5F7;
     cursor: pointer;
 }
@@ -110,7 +108,7 @@ header {
 }
 
 #nav .fas {
-    margin-right: 0.5rem;
+    margin-right: 5px;
 }
 
 #hero {
@@ -128,17 +126,17 @@ header {
 
 #hero h2 {
     position: relative;
-    top: 80px;
+    top: 75px;
     text-align: center;
-    font-size: 2.6rem;
-    line-height: 3.4rem;
+    font-size: 1.667rem;
+    line-height: 2.222rem;
     color:#2D3A66;
 }
 
 #driven-emphasis {
     background-color: #DFBD98;
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 #difference-emphasis {
@@ -152,7 +150,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 7rem 1.5rem;
+    padding: 70px 15px;
     background-color:#FFFFFF;
     color: #2D3A66;
 }
@@ -162,8 +160,7 @@ header {
 }
 
 .content-sections h2 {
-    font-size: 2.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
     width: 100%;
 }
 
@@ -177,7 +174,6 @@ header {
 
 .skills-flex-container,
 .projects-flex-container {
-    height: 100%;
     width: 100%;
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #2D3A66;
@@ -189,26 +185,36 @@ header {
 }
 
 #about img {
-    margin-top: 1.5rem;
+    margin-top: 15px;
     border-radius: 8px;
 }
 
 .text-emphasis,
-#emphasis-and-link {
+#about-text a {
+    color: #2D3A66;
     font-weight: 400;
-    color: #B59874;
 }
 
-#emphasis-and-link:hover {
-    color:#2D3A66;
+#about-text a {
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #B59874 0%, #B59874 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2rem;
+    background-position: 0 95%;
+    transition: background-size 0.3s ease-in;
+
+}
+
+#about-text a:hover {
+    background-size: 100% 88%;
 }
 
 .skills-flex-container {
-    padding: 2rem 1rem;
+    padding: 20px 10px;
 }
 
 .skills-flex-spacing {
-    margin-bottom: 2.5rem;
+    margin-bottom: 25px;
 }
 
 #skills h3 {
@@ -223,26 +229,25 @@ header {
 
 .skill-logo {
     text-align: center;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 10px;
+    padding: 10px;
 }
 
 .img-container {
     display: flex; 
     justify-content: center;
     align-items: center;
-    height: 8rem;
-    width: 8rem;
+    height: 80px;
+    width: 80px;
 }
 
 .img-container img {
-    max-height: 8rem;
-    max-width: 8rem;
+    max-height: 80px;
+    max-width: 80px;
 }
 
 .skill-logo figcaption {
-    font-size: 1.4rem;
-    margin-top: 0.5rem;
+    margin-top: 5px;
 }
 
 .project-image img {
@@ -250,17 +255,17 @@ header {
 }
 
 .project-name {
-    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .project-description {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
 .project-info {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 10px;
 }
 
 .tech-stack {
@@ -272,11 +277,10 @@ header {
 .tech-stack li {
     list-style: none;
     display: inline-block;
-    font-size: 1.6rem;
-    border: 0.1rem solid #2D3A66;
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
+    border: 1px solid #2D3A66;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
 }
 
 .project-buttons {
@@ -292,10 +296,10 @@ header {
     color: #ECF5F7;
     font-weight: 400;
     cursor: pointer;
-    width: 12rem;
-    height: 4rem;
+    width: 120px;
+    height: 40px;
     position: relative;
-    margin: 1rem;
+    margin: 10px;
     z-index: 0;
 }
 
@@ -312,23 +316,21 @@ header {
 .project-button::before {
     background-color: #2D3A66;
     z-index: -1;
-    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .project-button::after {
     background-color: #B59874;
-    transform: translate(0.5rem, 0.5rem);
+    transform: translate(5px, 5px);
     z-index: -2;
 }
 
 .contact-flex-container {
     width: 100%;
-    height: 100%;
 }
 
 #contact a {
     text-decoration-line: none;
-    text-align: left;
     display: flex;
     align-items: center;
     width: max-content;
@@ -343,13 +345,13 @@ header {
 }
 
 .contact-spacing {
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
 }
 
 #contact .fab,
 #contact .fas {
-    margin-right: 0.5rem;
-    font-size: 3.0rem;
+    margin-right: 5px;
+    font-size: 2rem;
     color: #B59874;
 }
 
@@ -369,51 +371,43 @@ img {
 }
 
 @media screen and (min-width: 375px) {
-    #hero h2,
-    .menu-button {
-        font-size: 3.2rem;
-    }
-
     #hero h2 {
-        line-height: 4.4rem;
+        top: 85px;
+        font-size: 1.778rem;
+        line-height: 2.444rem;
     }
 }
 
 @media screen and (max-height: 415px) {
     #hero h2 {
-        top: 65px;
+        top: 75px !important;
     }
 }
 
 @media screen and (min-width: 768px) {
-    #main-heading,
-    .menu-button {
-        font-size: 3.2rem;
-    }
-
-    #hero h2,
-    .content-sections h2 {
-        font-size: 4.5rem;
-    }
-
     #hero h2 {
-        top: 85px;
-        line-height: 6.0rem;
+        top: 100px;
+        font-size: 2.222rem;
+        line-height: 3rem;
     }
 
     .content-sections h2,
     .container-width {
-        width: 95%;
+        width: 90%;
+    }
+
+    .about-flex-container {
+        flex-direction: row;
     }
 
     .img-container {
-        height: 10rem;
-        width: 10rem;
+        height: 100px;
+        width: 100px;
     }
 
     .img-container img {
-        max-height: 10rem;
-        max-width: 10rem;
+        max-height: 100px;
+        max-width: 100px;
     }
 
     .projects-flex-container {
@@ -422,6 +416,10 @@ img {
 
     .project-image {
         width: 50%;
+    }
+
+    .project-image img {
+        height: 100%;
     }
 
     .project-info {
@@ -433,52 +431,48 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+
     .menu-button,
     header label {
         display: none;
     }
 
     p {
-        font-size: 2.0rem;
-        line-height: 3.0rem;
+        line-height: 1.6rem;
     }
 
     main, footer {
-        margin-left: 215px;
+        margin-left: 213px;
     }
 
     header {
         flex-direction: column;
         height: 100%;
-        box-shadow: none;
-        width: 215px;
-        box-shadow: 2px 0 5px 0 #2D3A66;
+        width: 213px;
     }
 
-    #header-text {
+    h1 {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 30px 0;
-        text-align: right;
-        align-items: flex-end;
-    }
-
-    #main-heading {
         position: static;
         transform: translate(0%, 0%);
-        font-size: 3.2rem;
-        margin-right: 1.5rem;
+        margin: 30px 0;
+        padding-right: 15px;
+        text-align: right;
+        font-size: 2rem;
     }
 
     #sub-heading {
         display: block;
         color: #ECF5F7;
         font-family: 'Oswald', sans-serif;
-        font-size: 2.4rem;
         font-weight: 300;
-        margin-top: 1rem;
-        margin-right: 1.5rem;
+        font-size: 1.5rem;
+        margin-top: 10px;
     }
 
     #nav {
@@ -488,29 +482,37 @@ img {
 
     #nav a {
         width: max-content;
-        font-size: 2.0rem;
-        padding: 1.5rem;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
 
     #hero h2 {
         top: 30px;
-        font-size: 4.5rem;
-        line-height: 6.0rem;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
     }
 
     #down-arrow {
         display: inline-block;
         align-self: center;
         position: absolute;
-        bottom: 15px;
-        opacity: 0.6;
+        bottom: 10px;
+        opacity: 0.5;
         animation: bounce 2s infinite;
     }
 
     #down-arrow img {
         display: inline-block;        
-        height: 50px;
-        width: 80px;
+        height: 30px;
+        width: 50px;
     }
 
     @keyframes bounce {
@@ -523,32 +525,23 @@ img {
         60% {
           transform: translateY(-15px);
         }
-      }
-
-    .content-sections h2 {
-        font-size: 4.5rem;
     }
 
     #about img {
         margin-top: 0;
-        margin-left: 1.5rem;
+        margin-left: 15px;
     }
 
     .content-sections {
-        padding: 5.0rem;
-    }
-
-    .content-sections h2,
-    .container-width {
-        width: 90%;
-    }
-
-    .about-flex-container {
-        flex-direction: row;
+        padding: 35px 50px;
     }
 
     #about-text {
         width: 100%;
+    }
+
+    .project-name {
+        margin-bottom: 0;
     }
 
     .project-button {
@@ -561,7 +554,7 @@ img {
     }
 
     .project-button:hover {
-        transform: translate(0.5rem, 0.5rem);
+        transform: translate(5px, 5px);
     }
     
     .project-button:hover::before {
@@ -570,21 +563,20 @@ img {
     
     .project-button:hover::after {
         background-color: #2D3A66;
-        transform: translate(-0.5rem, -0.5rem);
-    }
-
-    #contact a {
-        font-size: 2.0rem;
+        transform: translate(-5px, -5px);
     }
 
     #contact .fab,
     #contact .fas {
-        font-size: 4.0rem;
-        margin-right: 1rem;
+        font-size: 2.5rem;
+        margin-right: 10px;
+    }
+
+    .contact-link {
+        font-size: 1.4rem;
     }
 
     footer {
-        font-size: 2.0rem;
         background-color: #ECF5F7;
         color: #2D3A66;
     }
