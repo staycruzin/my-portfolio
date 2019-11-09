@@ -202,11 +202,6 @@ h1 {
     background-size: 100% 0.2rem;
     background-position: 0 95%;
     transition: background-size 0.3s ease-in;
-
-}
-
-#about-text a:hover {
-    background-size: 100% 88%;
 }
 
 .skills-flex-container {
@@ -289,42 +284,46 @@ h1 {
 }
 
 .project-button {
+    display: block;
+    position: relative;
+    width: 6.6667rem;
+    height: 2.223rem;
+    color: #ECF5F7;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400);
+}
+ 
+.project-button span,
+.project-button .icon {
+    height: 100%;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+}
+    
+.project-button span {
+    width: 72%;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: #ECF5F7;
-    font-weight: 400;
-    cursor: pointer;
-    width: 120px;
-    height: 40px;
-    position: relative;
-    margin: 10px;
-    z-index: 0;
-}
-
-.project-button::before,
-.project-button::after {
-    content: '';
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    top: 0;
-    left: 0;
-}
-
-.project-button::before {
     background-color: #2D3A66;
-    z-index: -1;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400);
 }
 
-.project-button::after {
-    background-color: #B59874;
-    transform: translate(5px, 5px);
-    z-index: -2;
+.project-button .icon {
+    width: 35%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECF5F7;
+    color: #2D3A66;
+    transition: all 0.25s cubic-bezier(0.310, -0.105, 0.430, 1.400), height 0.25s ease;
 }
-
+    
 .contact-flex-container {
     width: 100%;
 }
@@ -427,7 +426,11 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-        .about-flex-container {
+    body {
+        font-size: 20px;
+    }
+
+    .about-flex-container {
         flex-direction: row;
     }
 
@@ -439,13 +442,23 @@ img {
         margin-top: 0;
         margin-left: 15px;
     }
+
+    .project-button {
+        width: 8.2rem;
+        height: 2.8rem;
+    }
+
+    .project-info {
+        padding: 15px;
+    }
+     
+    .project-button span,
+    .project-button .icon {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    body {
-        font-size: 20px;
-    }
-
     .menu-button,
     header label {
         display: none;
@@ -517,11 +530,12 @@ img {
         position: absolute;
         bottom: 10px;
         opacity: 0.5;
+        cursor: pointer;
         animation: bounce 2s infinite;
     }
 
     #down-arrow img {
-        display: inline-block;        
+        display: inline-block; 
         height: 30px;
         width: 50px;
     }
@@ -542,34 +556,26 @@ img {
         padding: 35px 50px;
     }
 
+    .project-button:hover span {
+        left: -65%;
+        opacity: 0;
+    }
+    
+    .project-button:hover .icon {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
     #about-text {
         width: 100%;
     }
 
+    #about-text a:hover {
+        background-size: 100% 88%;
+    }
+
     .project-name {
         margin-bottom: 0;
-    }
-
-    .project-button {
-        transition: 0.3s;
-    }
-
-    .project-button::before,
-    .project-button::after {
-        transition: 0.3s;
-    }
-
-    .project-button:hover {
-        transform: translate(5px, 5px);
-    }
-    
-    .project-button:hover::before {
-        background-color: #B59874;
-    }
-    
-    .project-button:hover::after {
-        background-color: #2D3A66;
-        transform: translate(-5px, -5px);
     }
 
     #contact .fab,
