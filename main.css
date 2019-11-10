@@ -24,7 +24,7 @@ h1, h2, h2 span {
 }
 
 h1 {
-    font-size: 1.444rem;
+    font-size: 1.667rem;
 }
 
 h2 {
@@ -59,6 +59,7 @@ header {
 
 h1 {
     position: absolute;
+    width: max-content;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -73,15 +74,9 @@ h1 {
     outline: 0;
     justify-content: center;
     align-items: center;
-    padding: 0 10px 2px 10px;
+    padding: 0 10px 7px 17px;
     color: #DFBD98;
-    font-size: 1.778rem;
-    transition: all .2s ease-in-out;
-}
-
-.menu-button:hover,
-.menu-button:focus {
-    transform: scale(1.2);
+    font-size: 2rem;
 }
 
 #nav {
@@ -128,8 +123,8 @@ h1 {
     position: relative;
     top: 75px;
     text-align: center;
-    font-size: 1.667rem;
-    line-height: 2.222rem;
+    font-size: 1.777rem;
+    line-height: 2.333rem;
     color:#2D3A66;
 }
 
@@ -250,11 +245,11 @@ h1 {
 }
 
 .project-name {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .project-description {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .project-info {
@@ -275,7 +270,7 @@ h1 {
     border: 1px solid #2D3A66;
     padding: 5px;
     margin-right: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .project-buttons {
@@ -446,6 +441,12 @@ img {
     .project-button {
         width: 8.2rem;
         height: 2.8rem;
+    }
+
+    .project-name,
+    .project-description,
+    .tech-stack li {
+        margin-bottom: 0px;
     }
 
     .project-info {
