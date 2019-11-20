@@ -71,9 +71,8 @@ h1 {
     cursor: pointer;
     align-self: center;
     outline: 0;
-    padding: 0 10px 7px 10px;
+    padding: 0 10px;
     color: #DFBD98;
-    font-size: 2rem;
 }
 
 #nav {
